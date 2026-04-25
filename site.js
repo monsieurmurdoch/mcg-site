@@ -26,6 +26,21 @@
     });
   }
 
+  const scrollToHash = () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const target = id ? document.getElementById(id) : null;
+
+    if (target) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ block: 'start' });
+      });
+    }
+  };
+
+  window.addEventListener('load', scrollToHash);
+  window.addEventListener('hashchange', scrollToHash);
+  scrollToHash();
+
   const form = document.querySelector('[data-contact-form]');
   const status = document.querySelector('[data-form-status]');
 
