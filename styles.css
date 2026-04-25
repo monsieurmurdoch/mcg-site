@@ -616,6 +616,15 @@ details p {
   line-height: 1.2;
 }
 
+.form-choice label > span {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.96rem;
+  font-weight: 750;
+  line-height: 1.25;
+  text-transform: none;
+}
+
 .form-choice input {
   flex: 0 0 auto;
   width: 18px;
